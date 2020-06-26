@@ -4,7 +4,6 @@ import './styles.css';
 function App() {
 
   const script = document.createElement('script');
-  const API_KEY = 'process.env.REACT_APP_TOMTOM_API_KEY';
 
   useEffect(() => {
     script.src = process.env.PUBLIC_URL + '/sdk/tomtom.min.js';
@@ -13,7 +12,7 @@ function App() {
     script.onload = function () {
       window.tomtom.L.map('map', {
         source: 'vector',
-        key: API_KEY,
+        key: process.env.REACT_APP_TOMTOM_KEY + '',
         center: [37.769167, -122.478468],
         basePath: '/sdk',
         zoom: 15
