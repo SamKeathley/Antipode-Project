@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import Search from './Search';
 import './styles.css';
+
 
 function App() {
 
@@ -21,7 +23,10 @@ function App() {
   }, [script]);
 
   return (
-    <div id='map'></div>
+    <div>
+      <div id='map'></div>
+      <Search />
+    </div>
   )
 }
 
