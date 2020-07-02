@@ -12,7 +12,10 @@ function SearchBar(props) {
 
     function addPosition(e) {
         e.preventDefault();
-        setPoints(prevPoints => [...prevPoints, { lat: points.position.lat, lon: points.position.lon }])
+        setPoints(prevPoints => ({
+            ...prevPoints,
+            position: { lon: points.position.lon, lat: points.position.lat }
+        }))
     }
 
     return (

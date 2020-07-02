@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { SearchProvider } from './SearchContext';
 import SearchBar from './SearchBar';
 import './styles.css';
