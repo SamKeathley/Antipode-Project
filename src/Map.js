@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-
 function Map() {
 
     const script = document.createElement('script');
@@ -10,11 +9,11 @@ function Map() {
         document.body.appendChild(script);
         script.async = true;
         script.onload = function () {
-            window.tomtom.L.map('map', {
-                source: 'vector',
+            window.tt.map({
                 key: process.env.REACT_APP_TOMTOM_KEY + '',
-                center: [37.769167, -122.478468],
-                basePath: '/sdk',
+                container: 'map',
+                source: 'tomtom://vector/1/basic-main',
+                center: [4.899431, 52.379189],
                 zoom: 15
             });
         }
